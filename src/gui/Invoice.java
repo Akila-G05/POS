@@ -28,8 +28,8 @@ public class Invoice extends javax.swing.JFrame {
 
     public Invoice() {
         initComponents();
-//        jLabel2.setText(Signin.getEmployeeEmail());
-        jLabel2.setText("admin@example.com");
+String email = Signin.getEmployeeEmail();
+        jLabel2.setText(email == null ? "" : email);
         genarateINVOICENumber();
         loadInvoice();
         loadPayment();
