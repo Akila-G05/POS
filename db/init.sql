@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
 
 INSERT INTO `customer` (`mobile`, `frist_name`, `last_name`, `email`, `points`) VALUES
 	('0770000001', 'Meraj', 'Lakvindu', 'customer.one@example.com', 8.4),
-	('0764012265', 'Akila', 'Gimhana', 'admin@example.com', 0),
+	('', 'Akila', 'Gimhana', 'admin@example.com', 0),
 	('0770000002', 'Sahan', 'Rohith', 'customer.two@example.com', 0);
 
 CREATE TABLE IF NOT EXISTS `employee` (
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `employee` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 INSERT INTO `employee` (`email`, `password`, `frist_name`, `last_name`, `nic`, `mobile`, `employee_type_id`, `date_registerd`, `gender_id`) VALUES
-	('admin@example.com', '123456', 'Akila', 'Gimhana', '200532701893', '0764012265', 1, '2023-07-19', 1),
+	('admin@example.com', '123456', 'Akila', 'Gimhana', '000000000000', '0770000005', 1, '2023-07-19', 1),
 	('cashier@example.com', '123456', 'oshan', 'sam', '000000000000', '0770000005', 2, '2023-07-19', 2);
 
 CREATE TABLE IF NOT EXISTS `employee_address` (
@@ -131,8 +131,8 @@ CREATE TABLE IF NOT EXISTS `grn` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1690821268931 DEFAULT CHARSET=utf8mb3;
 
 INSERT INTO `grn` (`id`, `supplier_mobile`, `employee_email`, `date_time`, `paid_amount`) VALUES
-	(1690820776180, '0754012265', 'admin@example.com', '2023-07-31 21:56:50', 700),
-	(1690821268930, '0754012265', 'admin@example.com', '2023-07-31 22:04:56', 900);
+	(1690820776180, '0770000006', 'admin@example.com', '2023-07-31 21:56:50', 700),
+	(1690821268930, '0770000006', 'admin@example.com', '2023-07-31 22:04:56', 900);
 
 CREATE TABLE IF NOT EXISTS `grn_item` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -237,7 +237,7 @@ CREATE TABLE IF NOT EXISTS `supplier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 INSERT INTO `supplier` (`mobile`, `frist_name`, `last_name`, `email`, `company_id`) VALUES
-	('0754012265', 'asdddd', 'dasddd', 'customer.three@example.com', 1),
+	('0770000006', 'asdddd', 'dasddd', 'customer.three@example.com', 1),
 	('0770000007', 'dasdsad', 'sadasd', 'customer.four@example.com', 2);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
