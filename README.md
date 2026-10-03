@@ -34,6 +34,8 @@ shop_app/
 │   ├── model/         # MySQL connection helper + POJOs (GRNItem, InoviceItems)
 │   ├── report/        # shop2.jasper — compiled invoice template
 │   └── resources/     # (empty) reserved for bundled assets
+├── db/
+│   └── init.sql       # Full schema + seed data for the `shop_db` database
 ├── lib/               # Third-party JARs (MySQL driver, FlatLaf, JasperReports, ...)
 ├── nbproject/         # NetBeans project configuration
 ├── test/              # Test sources
@@ -84,8 +86,17 @@ unset in `project.properties`)
 
 ### Database configuration
 
-Connection settings live in `src/model/MySQL.java`. Update the JDBC URL, username, and
-password to match your local MySQL setup before running.
+Import the schema and seed data:
+
+```sh
+mysql -u root -p < db/init.sql
+```
+
+Then update the connection settings in `src/model/MySQL.java` (JDBC URL, username, and
+password) to match your local MySQL setup.
+
+> **Note:** `db/init.sql` seeds employee accounts with plaintext passwords, NICs, and phone
+> numbers. Change or remove them before using this database anywhere but your local machine.
 
 ### Build & Run
 
