@@ -95,8 +95,9 @@ mysql -u root -p < db/init.sql
 Then update the connection settings in `src/model/MySQL.java` (JDBC URL, username, and
 password) to match your local MySQL setup.
 
-> **Note:** `db/init.sql` seeds employee accounts with plaintext passwords, NICs, and phone
-> numbers. Change or remove them before using this database anywhere but your local machine.
+> **Note:** `db/init.sql` seeds employee and customer accounts with plaintext passwords and
+> placeholder contact details. Change or remove them before using this database anywhere but
+> your local machine.
 
 ### Build & Run
 

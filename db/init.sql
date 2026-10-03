@@ -55,9 +55,9 @@ CREATE TABLE IF NOT EXISTS `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 INSERT INTO `customer` (`mobile`, `frist_name`, `last_name`, `email`, `points`) VALUES
-	('0770000001', 'Meraj', 'Lakvindu', 'customer.one@example.com', 8.4),
-	('', 'Akila', 'Gimhana', 'admin@example.com', 0),
-	('0770000002', 'Sahan', 'Rohith', 'customer.two@example.com', 0);
+	('0770000001', 'Customer', 'One', 'customer.one@example.com', 8.4),
+	('', 'Portal', 'Administrator', 'admin@example.com', 0),
+	('0770000002', 'Customer', 'Two', 'customer.two@example.com', 0);
 
 CREATE TABLE IF NOT EXISTS `employee` (
   `email` varchar(45) NOT NULL,
@@ -77,8 +77,8 @@ CREATE TABLE IF NOT EXISTS `employee` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 INSERT INTO `employee` (`email`, `password`, `frist_name`, `last_name`, `nic`, `mobile`, `employee_type_id`, `date_registerd`, `gender_id`) VALUES
-	('admin@example.com', '123456', 'Akila', 'Gimhana', '000000000000', '0770000005', 1, '2023-07-19', 1),
-	('cashier@example.com', '123456', 'oshan', 'sam', '000000000000', '0770000005', 2, '2023-07-19', 2);
+	('admin@example.com', 'password', 'Portal', 'Administrator', '000000000000', '0770000005', 1, '2023-07-19', 1),
+	('cashier@example.com', 'password', 'Cashier', 'User', '000000000000', '0770000005', 2, '2023-07-19', 2);
 
 CREATE TABLE IF NOT EXISTS `employee_address` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -237,8 +237,8 @@ CREATE TABLE IF NOT EXISTS `supplier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 INSERT INTO `supplier` (`mobile`, `frist_name`, `last_name`, `email`, `company_id`) VALUES
-	('0770000006', 'asdddd', 'dasddd', 'customer.three@example.com', 1),
-	('0770000007', 'dasdsad', 'sadasd', 'customer.four@example.com', 2);
+	('0770000006', 'Sample', 'Supplier One', 'customer.three@example.com', 1),
+	('0770000007', 'Sample', 'Supplier', 'customer.four@example.com', 2);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
