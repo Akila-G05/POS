@@ -21,7 +21,7 @@ public class MySQL {
     static{
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/shop_db", "root", "akila@2005");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/shop_db", "username", "password");
         } catch (Exception e) {
             e.printStackTrace();
         }
